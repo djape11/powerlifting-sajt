@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Progres treninga</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6fb;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #002244;
+      margin-bottom: 2rem;
+      user-select: none;
+    }
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    thead {
+      background-color: #eaf2ff;
+    }
+    th, td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      user-select: none;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    input[type="number"] {
+      width: 80px;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: inherit;
+      text-align: center;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="number"]:focus {
+      border-color: #0055cc;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0,85,204,0.5);
+      background-color: #f0f7ff;
+    }
+    .progress-text {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0077cc;
+      user-select: text;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Progres treninga</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vežba</th>
+      <th>Trenutni max (kg)</th>
+      <th>Cilj (kg)</th>
+      <th>Napredak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bench press</td>
+      <td><input type="number" id="bench-current" value="80" min="0"></td>
+      <td><input type="number" id="bench-goal" value="100" min="1"></td>
+      <td id="bench-progress" class="progress-text">0%</td>
+    </tr>
+    <tr>
+      <td>Deadlift</td>
+      <td><input type="number" id="deadlift-current" value="150" min="0"></td>
+      <td><input type="number" id="deadlift-goal" value="200" min="1"></td>
+      <td id="deadlift-progress" class="progress-text">0%</td>
+    </tr>
+    <tr>
+      <td>Čučanj</td>
+      <td><input type="number" id="squat-current" value="90" min="0"></td>
+      <td><input type="number" id="squat-goal" value="120" min="1"></td>
+      <td id="squat-progress" class="progress-text">0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function updateProgress(exercise) {
+    const current = document.getElementById(`${exercise}-current`);
+    const goal = document.getElementById(`${exercise}-goal`);
+    const progress = document.getElementById(`${exercise}-progress`);
+
+    function calc() {
+      const curVal = parseFloat(current.value) || 0;
+      const goalVal = parseFloat(goal.value) || 1;
+      let percent = ((curVal / goalVal) * 100).toFixed(1);
+      if (percent > 100) percent = 100;
+      progress.textContent = percent + '%';
+    }
+
+    current.addEventListener('input', calc);
+    goal.addEventListener('input', calc);
+    calc();
+  }
+
+  ['bench', 'deadlift', 'squat'].forEach(updateProgress);
+</script>
+
+</body>
+</html>

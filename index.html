@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Powerlifting Tracker - Praćenje treninga</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .zaglavlje {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .zaglavlje img {
+      height: 60px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #002244;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #eaf2ff;
+      padding: 0.8rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .main-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-menu li a {
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      color: #002244;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      user-select: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    /* Animacija boje prilikom hover i click */
+    .main-menu li a:hover {
+      background-color: #b8d1ff;
+      color: #000;
+    }
+    .main-menu li a:active {
+      background-color: #84b0ff;
+      color: #001833;
+      transition: background-color 0.2s ease;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      background-color: #fff;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    }
+
+    article h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    section {
+      margin: 3rem 0;
+    }
+
+    section h3 {
+      color: #003366;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .centrirana-lista {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    ol {
+      display: inline-block;
+      text-align: left;
+      padding-left: 1.2rem;
+      font-weight: 600;
+      color: #002244;
+    }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    footer a {
+      color: #66b2ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #aaddff;
+      text-decoration: underline;
+    }
+
+    /* Link u tekstu */
+    a {
+      color: #66b2ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #004a99;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="zaglavlje">
+    <img src="image1.jpg" alt="Powerlifting logo" />
+    <h1>PRAĆENJE TRENINGA U POWERLIFTINGU</h1>
+  </div>
+  <p>Dobrodošli na naš sajt</p>
+</header>
+
+<nav>
+  <ul class="main-menu">
+    <li><a href="register.html">Baza korisnika</a></li>
+    <li><a href="programi.html">Programi treninga</a></li>
+    <li><a href="import-export.html">Trening log</a></li>
+    <li><a href="progres.html">Progres</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="galerija.html">Galerija</a></li>
+  </ul>
+</nav>
+
+<main>
+  <article>
+    <h2>O našem sajtu i Powerliftingu</h2>
+
+    <section>
+      <p>Ovaj sajt napravljen je kao projekat za predmet web projektovanje u mašinstvu. Nadam se da će Vam se svideti.</p>
+    </section>
+
+    <section>
+      <h3>🏋 Šta je powerlifting?</h3>
+      <p>Powerlifting je takmičarski sport snage koji se sastoji od tri pokreta:</p>
+      <div class="centrirana-lista">
+        <ol>
+          <li>Čučanj (squat)</li>
+          <li>Potisak sa klupe (bench press)</li>
+          <li>Mrtvo dizanje (deadlift)</li>
+        </ol>
+      </div>
+      <p>Takmičari imaju tri pokušaja za svaki pokret da postignu maksimalnu težinu.</p>
+    </section>
+
+    <section>
+      <h3>📚 Istorija powerliftinga</h3>
+      <p>
+        Powerlifting je nastao sredinom 20. veka kao alternativa olimpijskom dizanju tegova. Fokusira se na maksimalnu snagu u tri vežbe: čučanj, bench press i mrtvo dizanje.
+      </p>
+      <p>
+        Prvo zvanično takmičenje održano je 1964. u SAD, a IPF (Međunarodna powerlifting federacija) osnovana je 1972. godine. Kroz godine su se razvile različite federacije — neke dozvoljavaju opremu (equipped), dok druge promovišu RAW takmičenja bez opreme.
+      </p>
+      <p>
+        Danas je sport globalno popularan, sve više prisutan i među rekreativcima, ženama i mladima zahvaljujući internetu i društvenim mrežama.
+      </p>
+      <p>
+        U Srbiji se powerlifting razvija od 1990-ih godina. Danas deluju klubovi i teretane, a aktivnosti podržavaju Powerlifting savez Srbije, regionalni Powerlifting savez Vojvodine i federacija WRPF Serbia, dok interesovanje za ovaj sport stalno raste.
+      </p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Powerlifting Sajt - Fakultetski projekat</p>
+    <address>
+      Kontakt: <a href="mailto:powerlifting@example.com">powerlifting@example.com</a>
+    </address>
+  </div>
+</footer>
+
+</body>
+</html>

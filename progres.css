@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  max-width: 600px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #f4f4f4;
+}
+
+.progress-text {
+  font-weight: bold;
+  color: #4CAF50;
+}

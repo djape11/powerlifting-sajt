@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galerija</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f6fb;
+      color: #333;
+      line-height: 1.6;
+      padding: 0 1rem 2rem;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #002244;
+      font-size: 2rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    main p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Grid galerija sa 3 kolone */
+    .galerija {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      justify-items: center;
+      margin: 2rem 0;
+    }
+
+    .galerija-item {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .galerija-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galerija-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .caption {
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #002244;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+
+    /* Animirano dugme nazad */
+    .btn-nazad {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.7rem 2rem;
+      background-color: #002244;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,34,68,0.4);
+    }
+
+    .btn-nazad:hover {
+      background-color: #0055cc;
+      box-shadow: 0 6px 15px rgba(0,85,204,0.6);
+      color: #e0eaff;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-nazad:active {
+      background-color: #001a40;
+      box-shadow: 0 2px 6px rgba(0,26,64,0.8);
+      transition: background-color 0.2s ease;
+    }
+
+    /* Responsive za manje ekrane */
+    @media (max-width: 700px) {
+      .galerija {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Galerija slika</h1>
+  </header>
+
+  <main>
+    <p>Dobrodošli, ovde možete videti tri glavna lifta u powerliftingu!</p>
+
+    <div class="galerija">
+      <div class="galerija-item">
+        <img src="image3.jpg" alt="Čučanj" />
+        <div class="caption">Čučanj</div>
+      </div>
+      <div class="galerija-item">
+        <img src="image4.jpg" alt="Bench press" />
+        <div class="caption">Bench press</div>
+      </div>
+      <div class="galerija-item">
+        <img src="image2.jpg" alt="Mrtvo dizanje" />
+        <div class="caption">Mrtvo dizanje</div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn-nazad">Nazad</a>
+  </main>
+</body>
+</html>
